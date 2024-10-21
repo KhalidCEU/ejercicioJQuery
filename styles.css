@@ -1,0 +1,52 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/45/58/ca/4558ca72ec1f17e00211306e0f74d769.jpg");
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+#mainContainer {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.link {
+    text-decoration: underline;
+    color: inherit;
+}
+
+#registerForm {
+    display: none;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 5px 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s ease;
+}

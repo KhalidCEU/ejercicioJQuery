@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <title>Just another web page</title>
+    </head>
+
+    <body>
+        <div id="mainContainer">
+            <h1>Just another web page</h1>
+            <p><b>💡 Fun fact: </b>
+                Deep down Gandalf is neither a wizard nor is he human. Gandalf is, in fact, a maiar.
+                <a href="https://en.wikipedia.org/wiki/Maiar" class="link" target="_blank">A maiar</a> in the simplest terms is a spirit that existed before the creation of Middle Earth.
+                They could take on "veils" usually bodies that, as we see in the movies, can be destroyed, but the maiar spirit itself cannot.
+            </p>
+            <button id="showRegister" class="button">Register</button>
+        </div>
+
+        <div id="registerForm">
+            <h2>Register Form</h2>
+            <input type="text" id="fullName" placeholder="Name & First Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="submitForm" class="button">Send</button>
+            <button id="cancelForm" class="button">Cancel</button>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="validate.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#showRegister").click(function() {
+                    $("#mainContainer").hide();
+                    $("#registerForm").show();
+                });
+
+                $("#cancelForm").click(function() {
+                    $("#registerForm").hide();
+                    $("#mainContainer").show();
+                });
+
+                $("#submitForm").click(function() {
+                    if (validateForm()) {
+                        alert("Form sent successfully");
+                        $("#registerForm").hide();
+                        $("#mainContainer").show();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
